@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Parameters Suite" parallel="classes" thread-count="2">
+
+<test name= "Parameter execute1">
+	
+	
+	<parameter name="email" value="admin"></parameter>
+	<parameter name="pass" value="admin"></parameter>
+	<parameter name="bow" value = "edge"></parameter>
+	<parameter name="url" value = "https://demoblaze.com/"></parameter>
+	<parameter name="wemails" value = "1234"></parameter>
+	<parameter name="cpass" value = "admin"></parameter>
+	<parameter name="cemail" value = "admin"></parameter>
+	<parameter name="wpass" value = "12345"></parameter>
+	
+	<classes>
+		<class name = "com.testng.demo.second_class"></class>
+	
+	</classes>
+</test>
+
+<test name= "Parameter execute2">
+	
+	
+	<parameter name="email" value="admin"></parameter>
+	<parameter name="pass" value="admin"></parameter>
+	<parameter name="bow" value = "firefox"></parameter>
+	<parameter name="url" value = "https://demoblaze.com/"></parameter>
+	<parameter name="wemails" value = "1234"></parameter>
+	<parameter name="cpass" value = "admin"></parameter>
+	<parameter name="cemail" value = "admin"></parameter>
+	<parameter name="wpass" value = "12345"></parameter>
+	
+	<classes>
+		<class name = "com.testng.demo.second_class"></class>
+	
+	</classes>
+</test>
+</suite>

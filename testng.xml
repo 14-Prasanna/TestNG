@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose = "7" preserve-order = "true" >
+  <test thread-count="5" name="method" parallel = "classes">
+    <classes>
+      <class name="com.testng.demo.second_class">
+      
+      <methods>
+      		<include name = "summa"></include>
+      		<exclude name = "validation"></exclude >
+      </methods>
+      
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
