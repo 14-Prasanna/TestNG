@@ -45,7 +45,7 @@ public class LoginDemo {
 		log.info("Clicked Login");//
 		String actual = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h2:nth-child(1)")))
 				.getText();
-		String expected = "My Account";
+		String expected = "MyAccount";
 		try {
 			Assert.assertEquals(actual, expected);
 			log.info("Login Successfull");
