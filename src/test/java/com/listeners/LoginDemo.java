@@ -15,17 +15,24 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class LoginDemo {
 	public static final ThreadLocal<WebDriver> driver1 = new ThreadLocal<WebDriver>();
 	public static Logger log = LogManager.getLogger(LoginDemo.class);
 
+	
+
 	@BeforeMethod
 	public void beforeMethod() {
-		log.info("Browser Initializing");
-		driver1.set(new FirefoxDriver());
-	}
+    	log.info("Browser Initializing");
+    	FirefoxOptions options = new FirefoxOptions();
+    	options.addArguments("--headless");   // headless mode ON
+    	options.addArguments("--width=1920");
+    	options.addArguments("--height=1080");
 
+    	driver1.set(new FirefoxDriver(options));
+	}
 	@Test(dataProvider="validdata",dataProviderClass=com.utils.ExeclDataProvider.class,priority=1)
 	public void vCase(String email, String password) {
 		WebDriver driver = driver1.get();
