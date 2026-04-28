@@ -99,7 +99,7 @@
 				<version>3.5.4</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+						<suiteXmlFile>listen.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<testFailureIgnore>false</testFailureIgnore>
 					<rerunFailingTestCount>2</rerunFailingTestCount>
